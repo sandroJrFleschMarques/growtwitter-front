@@ -4,10 +4,10 @@ import type { TweetType } from './TweetType';
 import type { UserType } from './UserType';
 import type { RegisterAccountValidationType } from './RegisterAccountValidationType';
 
-export type {
-  TweetType,
-  NoteType,
-  CreateAccountType,
-  UserType,
-  RegisterAccountValidationType
-};
+export type { TweetType, NoteType, CreateAccountType, UserType, RegisterAccountValidationType };
+
+export interface PostTweetResponse {
+  data?: {
+    success: boolean;
+  };
+}

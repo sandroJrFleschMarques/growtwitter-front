@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { getUserToken } from './authentication';
+import type { PostTweetResponse } from '@/types';
 
 const client = axios.create({
   baseURL: import.meta.env.VITE_API_URL,
@@ -74,7 +75,7 @@ export async function showPosts(endpoint: string) {
   }
 }
 
-export async function postTweet(content: string) {
+export async function postTweet(content: string): Promise<PostTweetResponse | any> {
   const config = {
     headers: { Authorization: `Bearer ${getUserToken()}` }
   };

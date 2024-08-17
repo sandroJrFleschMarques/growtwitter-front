@@ -1,16 +1,16 @@
 <script setup lang="ts">
 import { postTweet } from '@/services/api';
-import { emit } from 'process';
-import { ref } from 'vue';
+import type { PostTweetResponse } from '@/types';
+import { ref, defineEmits } from 'vue';
 
-const emit = defineEmits(['addTweet']);
+const emit = defineEmits(['addTweet', 'updateKey']);
 const content = ref<string>('');
 const isTweeting = ref<boolean>(false);
 const hasMessage = ref<boolean>(false);
 const message = ref<string>('');
 const messageTimeout = ref<number>(-1);
 const alertType = ref<string>('');
-const closeModal = ref<boolean>(false);
+const closeModal = ref<any>(false);
 const spinnerLoading = ref<boolean>(false);
 const maxContentLength = 280;
 
@@ -27,9 +27,9 @@ async function handlePostTweet() {
   }
 
   isTweeting.value = true;
-  const res = await postTweet(content.value);
+  const res: PostTweetResponse = await postTweet(content.value);
 
-  if (!res?.data.success) {
+  if (!res.data?.success) {
     spinnerLoading.value = false;
     showMessage('Erro ao publicar tweet', 'error');
     return;
@@ -69,16 +69,17 @@ function clearMessage() {
     variant="flat"
   >
     <div class="text-none font-weight-regular">Tweetar</div>
-    <v-model>
-      <v-alert
-        v-if="hasMessage"
-        closable
-        class="alert fixed-alert"
-        :text="message"
-        :color="alertType"
-        @click:close="clearMessage()"
-      ></v-alert>
-    </v-model>
+
+    <!-- Removido o v-model incorretamente usado aqui -->
+
+    <v-alert
+      v-if="hasMessage"
+      closable
+      class="alert fixed-alert"
+      :text="message"
+      :color="alertType"
+      @click:close="clearMessage()"
+    ></v-alert>
 
     <v-dialog class="modal" v-model="closeModal" activator="parent" max-width="500">
       <template v-slot:default="{ isActive }">

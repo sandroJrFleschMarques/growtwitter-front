@@ -15,7 +15,7 @@ const listenEmit = () => {
 
 const loadingVisible = ref<boolean>(false);
 const tweets = ref<TweetType[]>([]);
-const item = ref<UserType[]>([]);
+const item = ref<UserType>();
 const endpoint = '/posts';
 
 async function fetchTweets() {
@@ -47,7 +47,7 @@ onMounted(() => {
 
 <template>
   <v-row class="ma-0 pa-0">
-    <v-col cols="3" class="d-none d-md-flex">
+    <v-col cols="3" class="d-none d-md-flex" v-if="item">
       <SideBar :item="item" @call-emit="listenEmit" />
     </v-col>
     <v-col cols="12" md="6">

@@ -43,11 +43,11 @@ onMounted(() => {
     <v-card-actions>
       <v-row>
         <v-col cols="2" class="d-flex justify-center">
-          <v-avatar :image="data.user.avatar_url ?? default_avatar" size="50"></v-avatar>
+          <v-avatar :image="data.user?.avatar_url ?? default_avatar" size="50"></v-avatar>
         </v-col>
         <v-col cols="10">
           <div class="tweet-header">
-            <strong>{{ data.user.name }}</strong> <span>@{{ data.user.username }}</span>
+            <strong>{{ data.user?.name }}</strong> <span>@{{ data.user?.username }}</span>
             <span> ·</span> <span>{{ tempoDesdeCriacao(data.created_at) }}</span>
           </div>
           <p class="tweet-content">{{ data.content }}</p>
