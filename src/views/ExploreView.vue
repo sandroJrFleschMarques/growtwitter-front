@@ -8,7 +8,7 @@ import ExploreComponent from '@/components/ExploreComponent.vue';
 import { items } from '@/utils/ExploreArray';
 import ApplicationBar from '@/components/ApplicationBar.vue';
 
-const item = ref<UserType[]>([]);
+const item = ref<any>();
 
 async function handleGetUser() {
   const userData = localStorage.getItem('userData');
@@ -28,7 +28,7 @@ onMounted(() => {
 <template>
   <v-row class="ma-0 pa-0">
     <v-col cols="3" class="d-none d-md-flex">
-      <SideBar :item="item" @call-emit="listenEmit" />
+      <SideBar :item="item" />
     </v-col>
     <v-col cols="12" md="6">
       <span class="home-content-title">
