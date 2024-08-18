@@ -79,7 +79,7 @@ function clearMessage() {
       @click:close="clearMessage()"
     ></v-alert>
 
-    <v-dialog class="modal" v-model="closeModal" activator="parent" max-width="500">
+    <v-dialog class="modal" v-model="closeModal" activator="parent">
       <template v-slot:default="{ isActive }">
         <v-card id="tweet-card" rounded="lg">
           <v-card-title class="d-flex justify-space-between align-center">
@@ -170,6 +170,9 @@ function clearMessage() {
   }
   .v-btn.tweet-btn:hover {
     background-color: #357ae8;
+  }
+  .modal {
+    max-width: 500px;
   }
 }
 
