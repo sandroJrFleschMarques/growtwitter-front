@@ -48,7 +48,7 @@ async function handlogout() {
         </v-col>
         <v-col cols="3" class="d-flex justify-center d-lg-none">
           <v-btn>
-            <ButtonTweet class="col-blue" />
+            <ButtonTweet @addTweet="fetchTweets" class="col-blue" />
           </v-btn>
         </v-col>
       </v-row>
