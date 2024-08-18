@@ -8,15 +8,28 @@ import HomePageLogo from '@/components/icons/homePageLogo.vue';
 <template>
   <v-layout>
     <v-bottom-navigation grow class="d-flex d-lg-none">
-      <v-btn>
-        <RouterLink to="/"><HomePageLogo class="img-icon" /></RouterLink>
-      </v-btn>
-      <v-btn>
-        <RouterLink to="/explore"><HashTagLogo class="img-icon" /></RouterLink>
-      </v-btn>
-      <v-btn>
-        <RouterLink to="/profile"><ProfileLogo class="img-icon" /></RouterLink>
-      </v-btn>
+      <v-row>
+        <v-col cols="3" class="d-flex d-lg-none">
+          <v-btn>
+            <RouterLink to="/"><HomePageLogo class="img-icon" /></RouterLink>
+          </v-btn>
+        </v-col>
+        <v-col cols="3" class="d-flex d-lg-none">
+          <v-btn>
+            <RouterLink to="/explore"><HashTagLogo class="img-icon" /></RouterLink>
+          </v-btn>
+        </v-col>
+        <v-col cols="3" class="d-flex d-lg-none">
+          <v-btn>
+            <RouterLink to="/profile"><ProfileLogo class="img-icon" /></RouterLink>
+          </v-btn>
+        </v-col>
+        <v-col cols="3" class="d-flex d-lg-none">
+          <v-btn>
+            <ButtonTweet class="bg-white" />
+          </v-btn>
+        </v-col>
+      </v-row>
     </v-bottom-navigation>
   </v-layout>
 </template>
