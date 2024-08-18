@@ -140,7 +140,7 @@ function clearMessage() {
 </template>
 
 <style scoped>
-@media (max-width: 500px) {
+@media (max-width: 959px) {
   #tweet-card {
     margin-top: -28px;
     margin-left: -25px;
@@ -152,21 +152,27 @@ function clearMessage() {
   .modal {
     max-height: 100% !important;
   }
+  .v-btn.tweet-btn {
+    max-width: 16vh;
+    max-height: 25vh;
+    color: #4285f4;
+  }
 }
-
-.v-btn.tweet-btn {
-  padding: 1em 1.5em 1em;
-  background-color: #4285f4;
-  border: none;
-  color: white;
-  border-radius: 21px;
-  cursor: pointer;
-  font-size: 1em;
-  display: flex;
-  align-items: center;
-}
-.v-btn.tweet-btn:hover {
-  background-color: #357ae8;
+@media (min-width: 960px) {
+  .v-btn.tweet-btn {
+    padding: 1em 1.5em 1em;
+    background-color: #4285f4;
+    border: none;
+    color: white;
+    border-radius: 21px;
+    cursor: pointer;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+  }
+  .v-btn.tweet-btn:hover {
+    background-color: #357ae8;
+  }
 }
 
 .alert {
