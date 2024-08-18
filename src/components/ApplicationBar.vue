@@ -62,7 +62,8 @@ async function handlogout() {
   max-height: 25vh;
 }
 @media (max-width: 959px) {
-  .col-black {
+  .col-black,
+  a {
     color: black !important;
   }
 
