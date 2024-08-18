@@ -33,17 +33,17 @@ async function handlogout() {
         </v-col>
         <v-col cols="2" class="d-flex d-lg-none">
           <v-btn>
-            <RouterLink to="/"><HomePageLogo class="img-icon" /></RouterLink>
+            <RouterLink to="/"><span class="mdi mdi-home"></span></RouterLink>
           </v-btn>
         </v-col>
         <v-col cols="2" class="d-flex d-lg-none">
           <v-btn>
-            <RouterLink to="/explore"><HashTagLogo class="img-icon" /></RouterLink>
+            <RouterLink to="/explore"><span class="mdi mdi-pound"></span></RouterLink>
           </v-btn>
         </v-col>
         <v-col cols="2" class="d-flex d-lg-none">
           <v-btn>
-            <RouterLink to="/profile"><ProfileLogo class="img-icon" /></RouterLink>
+            <RouterLink to="/profile"><span class="mdi mdi-account-outline"></span></RouterLink>
           </v-btn>
         </v-col>
         <v-col cols="3" class="d-flex d-lg-none">
@@ -57,7 +57,7 @@ async function handlogout() {
 </template>
 
 <style scoped>
-.img-icon {
+.mdi {
   max-width: 16vh;
   max-height: 25vh;
 }
