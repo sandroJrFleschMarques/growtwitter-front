@@ -1,9 +1,23 @@
 <script setup lang="ts">
-import homePageLogo from '@/components/icons/homePageLogo.vue';
 import HashTagLogo from '@/components/icons/hashTagLogo.vue';
 import ProfileLogo from '@/components/icons/profileLogo.vue';
 import HomePageLogo from '@/components/icons/homePageLogo.vue';
 import ButtonTweet from './ButtonTweet.vue';
+import { logout } from '@/services/api';
+import router from '@/router';
+import { resetStorage } from '@/services/authentication';
+
+async function handlogout() {
+  const response = await logout();
+  if (response.status === 200) {
+    resetStorage();
+    router.push('/login');
+  } else if (response.status === 400) {
+    alert('Falha ao deslogar.');
+  } else {
+    alert('Ocorreu um erro entre em contato com o suporte.');
+  }
+}
 </script>
 
 <template>
@@ -12,15 +26,20 @@ import ButtonTweet from './ButtonTweet.vue';
       <v-row>
         <v-col cols="3" class="d-flex d-lg-none">
           <v-btn>
+            <ButtonDefault class="" @click="handlogout"><p>Sair</p> </ButtonDefault>
+          </v-btn>
+        </v-col>
+        <v-col cols="2" class="d-flex d-lg-none">
+          <v-btn>
             <RouterLink to="/"><HomePageLogo class="img-icon" /></RouterLink>
           </v-btn>
         </v-col>
-        <v-col cols="3" class="d-flex d-lg-none">
+        <v-col cols="2" class="d-flex d-lg-none">
           <v-btn>
             <RouterLink to="/explore"><HashTagLogo class="img-icon" /></RouterLink>
           </v-btn>
         </v-col>
-        <v-col cols="3" class="d-flex d-lg-none">
+        <v-col cols="2" class="d-flex d-lg-none">
           <v-btn>
             <RouterLink to="/profile"><ProfileLogo class="img-icon" /></RouterLink>
           </v-btn>
