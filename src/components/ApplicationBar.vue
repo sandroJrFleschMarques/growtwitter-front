@@ -27,7 +27,7 @@ import ButtonTweet from './ButtonTweet.vue';
         </v-col>
         <v-col cols="3" class="d-flex d-lg-none">
           <v-btn>
-            <ButtonTweet class="bg-white" />
+            <ButtonTweet />
           </v-btn>
         </v-col>
       </v-row>
