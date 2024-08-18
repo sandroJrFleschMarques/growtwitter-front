@@ -31,17 +31,17 @@ async function handlogout() {
             ></ButtonDefault>
           </v-btn>
         </v-col>
-        <v-col cols="2" class="d-flex d-lg-none">
+        <v-col cols="2" class="d-flex justify-center d-lg-none">
           <v-btn>
             <RouterLink to="/"><span class="mdi mdi-home"></span></RouterLink>
           </v-btn>
         </v-col>
-        <v-col cols="2" class="d-flex d-lg-none">
+        <v-col cols="2" class="d-flex justify-center d-lg-none">
           <v-btn>
             <RouterLink to="/explore"><span class="mdi mdi-pound"></span></RouterLink>
           </v-btn>
         </v-col>
-        <v-col cols="2" class="d-flex d-lg-none">
+        <v-col cols="2" class="d-flex justify-center d-lg-none">
           <v-btn>
             <RouterLink to="/profile"><span class="mdi mdi-account-outline"></span></RouterLink>
           </v-btn>
