@@ -173,6 +173,18 @@ function clearMessage() {
   .modal {
     max-width: 500px;
   }
+  .alert {
+    margin: 0 10px !important;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    width: auto;
+    max-width: 90%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
 }
 
 .alert {
