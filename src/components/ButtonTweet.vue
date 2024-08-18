@@ -154,6 +154,9 @@ function clearMessage() {
     max-width: 16vh;
     max-height: 25vh;
   }
+  .alert {
+    display: none;
+  }
 }
 @media (min-width: 960px) {
   .v-btn.tweet-btn {
@@ -172,9 +175,6 @@ function clearMessage() {
   }
   .modal {
     max-width: 500px;
-  }
-  .alert {
-    display: none;
   }
 }
 
