@@ -68,7 +68,7 @@ function clearMessage() {
     prepend-icon="mdi-feather"
     variant="flat"
   >
-    <div class="text-none font-weight-regular">Tweetar</div>
+    <div class="text-none font-weight-regular d-none d-md-flex">Tweetar</div>
 
     <!-- Removido o v-model incorretamente usado aqui -->
 
