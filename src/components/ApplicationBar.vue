@@ -46,9 +46,9 @@ async function handlogout() {
             <RouterLink to="/profile"><span class="mdi mdi-account-outline"></span></RouterLink>
           </v-btn>
         </v-col>
-        <v-col cols="3" class="d-flex justify-center d-lg-none col-blue">
+        <v-col cols="3" class="d-flex justify-center d-lg-none">
           <v-btn>
-            <ButtonTweet />
+            <ButtonTweet class="col-blue" />
           </v-btn>
         </v-col>
       </v-row>
