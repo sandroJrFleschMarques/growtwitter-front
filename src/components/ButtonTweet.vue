@@ -70,8 +70,6 @@ function clearMessage() {
   >
     <div class="text-none font-weight-regular d-none d-md-flex">Tweetar</div>
 
-    <!-- Removido o v-model incorretamente usado aqui -->
-
     <v-alert
       v-if="hasMessage"
       closable

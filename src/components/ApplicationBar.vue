@@ -24,7 +24,7 @@ async function handlogout() {
   <v-layout>
     <v-bottom-navigation grow class="d-flex d-lg-none">
       <v-row>
-        <v-col cols="3" class="d-flex d-lg-none">
+        <v-col cols="3" class="d-flex justify-center d-lg-none">
           <v-btn>
             <ButtonDefault class="" @click="handlogout"
               ><span class="mdi mdi-exit-to-app"></span
@@ -46,7 +46,7 @@ async function handlogout() {
             <RouterLink to="/profile"><span class="mdi mdi-account-outline"></span></RouterLink>
           </v-btn>
         </v-col>
-        <v-col cols="3" class="d-flex d-lg-none">
+        <v-col cols="3" class="d-flex justify-center d-lg-none">
           <v-btn>
             <ButtonTweet />
           </v-btn>
