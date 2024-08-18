@@ -26,7 +26,9 @@ async function handlogout() {
       <v-row>
         <v-col cols="3" class="d-flex d-lg-none">
           <v-btn>
-            <ButtonDefault class="" @click="handlogout"><p>Sair</p> </ButtonDefault>
+            <ButtonDefault class="" @click="handlogout"
+              ><span class="mdi mdi-exit-to-app"></span
+            ></ButtonDefault>
           </v-btn>
         </v-col>
         <v-col cols="2" class="d-flex d-lg-none">
