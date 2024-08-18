@@ -66,7 +66,8 @@ async function handlogout() {
     color: black !important;
   }
 
-  .col-blue {
+  .col-blue,
+  v-btn--variant-flat {
     color: rgb(66, 133, 244) !important;
   }
 }
