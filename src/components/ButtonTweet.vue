@@ -152,10 +152,10 @@ function clearMessage() {
   .modal {
     max-height: 100% !important;
   }
-  .v-btn.tweet-btn {
+  body .v-btn.tweet-btn[data-v-aa6665bd] {
     max-width: 16vh;
     max-height: 25vh;
-    color: #4285f4;
+    color: rgb(66, 133, 244); /* Increased specificity */
   }
 }
 @media (min-width: 960px) {
