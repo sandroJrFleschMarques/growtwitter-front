@@ -11,7 +11,7 @@ defineProps<Props>();
 </script>
 
 <template>
-  <v-row>
+  <v-row class="mb-12">
     <v-col cols="12" class="py-0" v-for="tweet in tweets" :key="tweet.id">
       <CardTweet :data="tweet" />
     </v-col>
