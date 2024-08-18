@@ -57,24 +57,26 @@ const handleLogin = async () => {
           </v-card-text>
         </v-col>
         <v-col cols="12" sm="6" class="bg-white rounded-e-lg pa-8">
-          <v-card-title>Entrar no Growtwitter</v-card-title>
+          <form @submit.prevent="handleLogin">
+            <v-card-title>Entrar no Growtwitter</v-card-title>
 
-          <v-text-field label="Email" v-model="email"></v-text-field>
-          <v-text-field type="password" label="Password" v-model="password"></v-text-field>
+            <v-text-field label="Email" v-model="email"></v-text-field>
+            <v-text-field type="password" label="Password" v-model="password"></v-text-field>
 
-          <div class="keep-connected-container">
-            <label for="keep-connected">Permanecer conectado:</label>
-            <input type="checkbox" id="keep-connected" v-model="keepConnected" />
-          </div>
+            <div class="keep-connected-container">
+              <label for="keep-connected">Permanecer conectado:</label>
+              <input type="checkbox" id="keep-connected" v-model="keepConnected" />
+            </div>
 
-          <v-btn block @click="handleLogin" class="bg-blue-darken-2 my-4">Enviar</v-btn>
+            <v-btn block type="submit" class="bg-blue-darken-2 my-4">Enviar</v-btn>
 
-          <v-card-text
-            >Não tem uma conta? <RouterLink to="/register">Clique aqui</RouterLink></v-card-text
-          >
-          <v-card-text
-            ><span class="error-message" v-if="error">{{ error }}</span></v-card-text
-          >
+            <v-card-text
+              >Não tem uma conta? <RouterLink to="/register">Clique aqui</RouterLink></v-card-text
+            >
+            <v-card-text
+              ><span class="error-message" v-if="error">{{ error }}</span></v-card-text
+            >
+          </form>
         </v-col>
       </v-row>
     </v-container>

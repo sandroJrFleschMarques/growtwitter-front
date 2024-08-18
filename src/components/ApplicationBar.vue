@@ -3,6 +3,7 @@ import homePageLogo from '@/components/icons/homePageLogo.vue';
 import HashTagLogo from '@/components/icons/hashTagLogo.vue';
 import ProfileLogo from '@/components/icons/profileLogo.vue';
 import HomePageLogo from '@/components/icons/homePageLogo.vue';
+import ButtonTweet from './ButtonTweet.vue';
 </script>
 
 <template>
