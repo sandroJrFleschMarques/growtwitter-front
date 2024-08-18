@@ -153,7 +153,6 @@ function clearMessage() {
   body .v-btn.tweet-btn[data-v-aa6665bd] {
     max-width: 16vh;
     max-height: 25vh;
-    color: rgb(66, 133, 244); /* Increased specificity */
   }
 }
 @media (min-width: 960px) {
