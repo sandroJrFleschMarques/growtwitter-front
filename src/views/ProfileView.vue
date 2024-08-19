@@ -169,7 +169,7 @@ async function fetchTweets() {
 }
 </script>
 <template>
-  <div class="home-container">
+  <v-container class="home-container">
     <div class="home-nav">
       <SideBar :item="item" />
     </div>
@@ -290,7 +290,7 @@ async function fetchTweets() {
       <ExploreComponent />
     </div>
     <ApplicationBar class="d-flex d-md-none" />
-  </div>
+  </v-container>
 </template>
 
 <style scoped>
