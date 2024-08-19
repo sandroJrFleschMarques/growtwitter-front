@@ -1,11 +1,14 @@
 <script setup lang="ts">
-import HashTagLogo from '@/components/icons/hashTagLogo.vue';
-import ProfileLogo from '@/components/icons/profileLogo.vue';
-import HomePageLogo from '@/components/icons/homePageLogo.vue';
 import ButtonTweet from './ButtonTweet.vue';
 import { logout } from '@/services/api';
 import router from '@/router';
 import { resetStorage } from '@/services/authentication';
+
+const emit = defineEmits(['callEmit']);
+
+const handleEmit = () => {
+  emit('callEmit');
+};
 
 async function handlogout() {
   const response = await logout();
@@ -48,7 +51,7 @@ async function handlogout() {
         </v-col>
         <v-col cols="3" class="d-flex justify-center d-lg-none">
           <v-btn>
-            <ButtonTweet class="col-blue" />
+            <ButtonTweet class="col-blue" @add-tweet="handleEmit" />
           </v-btn>
         </v-col>
       </v-row>

@@ -63,7 +63,7 @@ onMounted(() => {
   <div class="spinner-div d-flex justify-center mt-5">
     <SpinnerComponent v-if="loadingVisible" color="blue" />
   </div>
-  <ApplicationBar class="d-flex d-md-none" />
+  <ApplicationBar class="d-flex d-md-none" @call-emit="listenEmit" />
 </template>
 
 <style scoped>
