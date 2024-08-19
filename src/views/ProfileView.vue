@@ -290,9 +290,9 @@ async function fetchTweets() {
       <div class="home-explorer">
         <ExploreComponent />
       </div>
+      <ApplicationBar class="d-flex d-md-none" />
     </div>
   </div>
-  <ApplicationBar class="d-flex d-md-none" />
 </template>
 
 <style scoped>
