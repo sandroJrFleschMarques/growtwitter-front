@@ -442,8 +442,7 @@ button:hover::before {
 }
 @media (max-width: 600px) {
   .profile-dialog .v-card {
-    min-width: 100vw;
-    min-height: 100vh;
+    min-width: 100%;
     border-radius: 0;
     margin: 0;
   }
